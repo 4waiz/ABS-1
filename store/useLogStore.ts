@@ -16,7 +16,8 @@ const storageFallback = {
   getItem: () => null,
   setItem: () => {},
   removeItem: () => {},
-} as Storage;
+  removeItems: () => {},
+} as unknown as Storage;
 
 const defaultSettings: SettingsState = {
   voiceEnabled: false,
