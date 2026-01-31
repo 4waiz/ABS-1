@@ -58,7 +58,7 @@ export function useSpeechToText({
     recognitionRef.current.onerror = () => {
       setListening(false);
     };
-    recognitionRef.current.onresult = (event) => {
+    recognitionRef.current.onresult = (event: any) => {
       let interim = "";
       let finalText = "";
       for (let i = event.resultIndex; i < event.results.length; i += 1) {
