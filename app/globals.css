@@ -1,0 +1,72 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 50 100% 96%;
+  --foreground: 222 25% 18%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 25% 18%;
+  --muted: 45 100% 92%;
+  --muted-foreground: 222 15% 35%;
+  --primary: 191 92% 45%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 52 98% 65%;
+  --secondary-foreground: 222 25% 18%;
+  --accent: 330 90% 60%;
+  --accent-foreground: 0 0% 100%;
+  --border: 222 25% 18%;
+  --input: 0 0% 100%;
+  --ring: 191 92% 45%;
+  --radius: 24px;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground font-sans;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(250, 204, 21, 0.35), transparent 45%),
+    radial-gradient(circle at 90% 10%, rgba(14, 165, 233, 0.35), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(244, 114, 182, 0.35), transparent 45%),
+    radial-gradient(circle at 20% 80%, rgba(45, 212, 191, 0.25), transparent 50%),
+    radial-gradient(circle, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+  background-size: cover, cover, cover, cover, 26px 26px;
+}
+
+h1, h2, h3, h4 {
+  @apply font-serif;
+  letter-spacing: -0.01em;
+}
+
+.cartoon-card {
+  border: 2px solid hsl(var(--border));
+  border-radius: var(--radius);
+  background: hsl(var(--card));
+  box-shadow: 6px 6px 0 rgba(15, 23, 42, 0.2);
+}
+
+.cartoon-shadow {
+  box-shadow: 8px 8px 0 rgba(15, 23, 42, 0.25);
+}
+
+.sticker {
+  border: 2px solid hsl(var(--border));
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 4px 4px 0 rgba(15, 23, 42, 0.2);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
